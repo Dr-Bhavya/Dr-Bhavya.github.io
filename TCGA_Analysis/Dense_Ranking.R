@@ -3,8 +3,9 @@
 # Purpose: Transform multi-cohort differential expression data into ranked matrices for Robust Rank Aggregation (RRA).
 
 library(data.table)
-
-# Load Differential Expression Matrix
+# Example
+# Load Differential Expression Matrix: log2FoldChange of genes in multiple conditions
+# The first row has gene names and the column names depict differential expression for control vs multiple different conditions
 # Using relative paths for portability
 input_file <- "data/Differential_Gene_Expression_Matrix.csv"
 cts <- read.csv(input_file, row.names = 1, header = TRUE, check.names = FALSE)
